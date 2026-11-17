@@ -1,32 +1,23 @@
-# Khushboo Mishra, portfolio
+# Khushboo Mishra
 
-Static site. One `index.html` plus a `media/` folder of GIFs, no build step, no dependencies. Fonts load from Google Fonts and fall back to system fonts.
+Full stack engineer in New York with 9.5 years of experience building backend systems and the interfaces on top of them, and more recently agentic AI and MCP workflows.
 
-## Publish on GitHub Pages
+**Portfolio: https://khushboo-mishra.github.io/**
 
-The repo must be named exactly `Khushboo-Mishra.github.io` to get the address `https://khushboo-mishra.github.io/`.
+## About
 
-1. On GitHub, create a new **public** repo named `Khushboo-Mishra.github.io` (empty, no README).
-2. From the folder containing these files:
+- Software Engineer II at Microsoft (2021 to 2026): Dynamics 365 Commerce search, Store Operations Copilot, Ask Ralph and Azure FarmBeats. Earlier at Expedia, Bounce and Samsung.
+- API Developer at NYU IT, Enterprise Integration Services (2026 to present): REST APIs, React and TypeScript front ends, and MCP and agent prototypes.
+- M.S. Management and Analytics at New York University, expected December 2026. B.E. Information Technology, Birla Institute of Technology, Mesra, 2016.
+- Two-time NYU hackathon winner (Apexon x NYU, NYU x NextAML) and top-two team in Track 2 of the NYU SPS x Google Marketing Accelerator.
 
-   ```bash
-   git init -b main
-   git add .
-   git commit -m "Add portfolio site"
-   git remote add origin https://github.com/Khushboo-Mishra/Khushboo-Mishra.github.io.git
-   git push -u origin main
-   ```
+## Projects
 
-3. In the repo, open **Settings > Pages**. Under **Build and deployment**, set Source to **Deploy from a branch**, branch `main`, folder `/ (root)`. Save.
-4. After about a minute the site is live at `https://khushboo-mishra.github.io/`.
+- [Creator Matchmaker](https://github.com/Khushboo-Mishra/creator-matchmaker): YouTube creator selection for marketing campaigns.
+- [AgentOps](https://github.com/Khushboo-Mishra/AgentOps): 13-stage production incident response pipeline.
+- [Credit risk agent](https://github.com/Khushboo-Mishra/NextAMLCreditRiskAgent): multi-agent commercial loan underwriting.
+- [SQL-MCP-101](https://github.com/Khushboo-Mishra/SQL-MCP-101): a governed MCP server and tutorial.
 
-Your SQL-MCP-101 tutorial already lives at `/SQL-MCP-101/` on the same domain, and this site does not touch it.
+## Contact
 
-## Editing
-
-Everything is in `index.html`. Search for the section ids: `work`, `wins`, `experience`, `skills`, `contact`.
-The "Last pushed" dates on the project cards are fetched live from the GitHub API and disappear quietly if the request fails.
-
-## Media
-
-`media/*.gif` are screen recordings of your own project pages (Creator Matchmaker, AgentOps, SQL-MCP-101). The matching `.png` files are static posters that visitors with "reduce motion" turned on see instead. Keep the `media/` folder when you commit.
+[LinkedIn](https://www.linkedin.com/in/khushboo-mishra-) | [GitHub](https://github.com/Khushboo-Mishra) | [Email](mailto:777khush@gmail.com)
