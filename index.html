@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khushboo Mishra, full stack engineer</title>
+<meta name="description" content="Full stack engineer with 9.5 years of backend systems at Microsoft, Expedia and startups. Two-time NYU hackathon winner building agentic AI and MCP systems. New York.">
+<meta property="og:title" content="Khushboo Mishra, full stack engineer">
+<meta property="og:description" content="Backend systems, the interfaces on top of them, and agentic AI. Work, evidence and code.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F0F2F5">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Khushboo Mishra","jobTitle":"Full stack engineer","url":"https://khushboo-mishra.github.io/","address":{"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY","addressCountry":"US"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"New York University"},{"@type":"CollegeOrUniversity","name":"Birla Institute of Technology, Mesra"}],"sameAs":["https://github.com/Khushboo-Mishra","https://www.linkedin.com/in/khushboo-mishra-"]}
+</script>
+<style>
+:root{
+  --paper:#F0F2F5; --card:#FFFFFF; --ink:#0F1220; --muted:#545B6E; --line:#D5D9E2;
+  --blue:#2736D8; --blue-soft:#E4E7FB;
+  --night:#0D1128; --night2:#171D3E; --night-line:#2A3263; --night-text:#E7E9F5; --night-muted:#9AA2C8;
+  --amber:#F2B33D; --green:#5FD3A0;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:6px;z-index:10}
+.skip:focus{left:8px}
+
+/* layout: sticky rail + content */
+.shell{display:grid;grid-template-columns:260px minmax(0,1fr);max-width:1180px;margin:0 auto;gap:0 64px;padding:0 32px}
+.rail{position:sticky;top:0;align-self:start;height:100vh;padding:48px 0 32px;display:flex;flex-direction:column;justify-content:space-between}
+.name{font-family:var(--display);font-weight:800;font-size:26px;line-height:1.05;letter-spacing:-.02em}
+.role{font-family:var(--display);color:var(--muted);font-size:15px;margin-top:8px}
+.rail nav{margin-top:44px;display:flex;flex-direction:column;gap:2px}
+.rail nav a{font-family:var(--display);font-size:16px;font-weight:600;color:var(--muted);text-decoration:none;padding:7px 0 7px 16px;border-left:2px solid var(--line);transition:color .15s,border-color .15s}
+.rail nav a:hover{color:var(--ink)}
+.rail nav a.on{color:var(--ink);border-left-color:var(--blue)}
+.rail .links{font-family:var(--display);font-size:15px;display:flex;flex-direction:column;gap:6px}
+.rail .links a{color:var(--ink)}
+
+main{padding:48px 0 96px;min-width:0}
+section{padding-top:72px}
+section:first-of-type{padding-top:0}
+h2{font-family:var(--display);font-weight:800;font-size:34px;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px}
+.lede{color:var(--muted);max-width:60ch;margin-bottom:32px}
+h3{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.2;letter-spacing:-.01em}
+
+/* hero */
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.6vw,50px);line-height:1.04;letter-spacing:-.03em;max-width:21ch}
+.hero .sub{margin-top:22px;max-width:56ch;font-size:20px}
+.facts{list-style:none;margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 10px}
+.facts li{font-family:var(--display);font-size:14.5px;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 13px}
+
+/* instrument panel */
+.panel{margin-top:40px;background:var(--night);color:var(--night-text);border-radius:16px;padding:22px 22px 18px;box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 24px 48px -28px rgba(13,17,40,.55)}
+.panel-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px}
+.panel-title{font-family:var(--display);font-weight:600;font-size:17px}
+.panel-title small{font-weight:400;color:var(--night-muted);font-size:14px;margin-left:8px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tab{font-family:var(--display);font-size:14px;font-weight:600;color:var(--night-muted);background:transparent;border:1px solid var(--night-line);border-radius:8px;padding:6px 11px;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.tab:hover{color:var(--night-text);border-color:var(--night-muted)}
+.tab[aria-pressed=true]{background:var(--night-text);color:var(--night);border-color:var(--night-text)}
+.signal{margin-top:14px;font-size:16px;color:var(--night-muted);min-height:3.2em}
+.signal b{color:var(--night-text);font-weight:600}
+.stages{list-style:none;margin-top:6px;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.stage{display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px solid var(--night2);font-family:var(--display);font-size:15px;color:var(--night-muted);transition:color .2s}
+.stage i{flex:none;width:11px;height:11px;border-radius:50%;border:2px solid var(--night-line);transition:background .2s,border-color .2s,box-shadow .2s}
+.stage.done{color:var(--night-text)}
+.stage.done i{background:var(--green);border-color:var(--green)}
+.stage.now{color:#fff}
+.stage.now i{background:var(--amber);border-color:var(--amber);box-shadow:0 0 0 5px rgba(242,179,61,.22)}
+.stage span.d{margin-left:auto;font-size:13px;color:var(--night-muted);text-align:right}
+.panel-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;margin-top:12px;padding-top:12px;border-top:1px solid var(--night2);font-size:14.5px;color:var(--night-muted)}
+.run{font-family:var(--display);font-size:14px;font-weight:600;background:var(--amber);color:var(--night);border:0;border-radius:8px;padding:7px 14px;cursor:pointer}
+.run:hover{filter:brightness(1.08)}
+.status{font-family:var(--display)}
+
+/* projects */
+.proj{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px;margin-top:20px}
+.proj-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 14px}
+.badge{font-family:var(--display);font-size:14px;font-weight:600;border-radius:6px;padding:2px 9px;background:var(--blue-soft);color:#1B2799;white-space:nowrap}
+.badge.win{background:#FFF1D3;color:#7A5200}
+.proj .where{font-family:var(--display);font-size:15px;color:var(--muted);margin-top:2px}
+.proj p{margin-top:12px;max-width:62ch}
+.tags{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tags li{font-family:var(--display);font-size:13.5px;font-weight:600;color:var(--muted);background:var(--paper);border-radius:6px;padding:2px 9px}
+.plinks{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:16px;font-family:var(--display);font-size:15.5px;font-weight:600}
+.live{color:var(--muted);font-weight:400;font-size:14.5px}
+.diagram{margin-top:18px}
+.chain{list-style:none;display:flex;flex-wrap:wrap;gap:6px;align-items:stretch}
+.chain li{font-family:var(--display);font-size:13.5px;font-weight:600;background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:5px 10px;position:relative}
+.chain li.llm{background:var(--blue-soft);border-color:#C3C9F5;color:#1B2799}
+.chain-note{font-size:14.5px;color:var(--muted);margin-top:8px;max-width:62ch}
+.ctrl{width:100%;border-collapse:collapse;font-size:15.5px}
+.ctrl th,.ctrl td{text-align:left;padding:7px 10px 7px 0;border-top:1px solid var(--line);vertical-align:top}
+.ctrl th{font-family:var(--display);font-weight:600;white-space:nowrap}
+.ctrl td:nth-child(2){font-family:var(--display);font-weight:600;color:var(--blue);white-space:nowrap}
+.ctrl td:last-child{color:var(--muted)}
+.counts{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:14px;font-family:var(--display);font-size:15px}
+.counts b{font-weight:800;font-size:22px;margin-right:4px}
+
+/* timeline */
+.tl{list-style:none;border-left:2px solid var(--line);margin-left:6px}
+.tl>li{position:relative;padding:0 0 38px 28px}
+.tl>li::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--blue)}
+.tl>li:last-child{padding-bottom:0}
+.when{font-family:var(--display);font-size:14.5px;color:var(--muted)}
+.tl h3{margin-top:2px}
+.tl .org{color:var(--muted);font-weight:400}
+.tl ul{margin:12px 0 0 18px}
+.tl li li{margin-top:8px;max-width:64ch}
+.tl ul.tags{margin:12px 0 0 0}
+.tl .tags li{background:#E3E6EE;margin-top:0}
+.note{font-size:15px;color:var(--muted);margin-top:10px}
+
+.src{display:block;margin-top:4px;font-family:var(--display);font-size:14.5px;color:var(--muted)}
+.src a{font-weight:600}
+
+/* media frames */
+.shot{margin-top:22px}
+.frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 22px 40px -28px rgba(13,17,40,.5)}
+.frame-bar{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#E8EBF1;border-bottom:1px solid var(--line);font-family:var(--display);font-size:13px;color:var(--muted)}
+.frame-bar .dots{display:flex;gap:5px}
+.frame-bar .dots i{width:9px;height:9px;border-radius:50%;background:#C3C8D4}
+.frame-bar a{color:var(--muted);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.frame img{display:block;width:100%;height:auto}
+.shot figcaption{font-family:var(--display);font-size:14.5px;color:var(--muted);margin-top:8px;max-width:70ch}
+
+/* animated step chains */
+.chain li{animation:sweep calc(var(--n) * .8s + 3s) ease-in-out infinite;animation-delay:calc(var(--i) * .8s)}
+@keyframes sweep{0%,18%,100%{box-shadow:0 0 0 0 rgba(242,179,61,0);transform:none}6%{box-shadow:0 0 0 3px rgba(242,179,61,.6);transform:translateY(-2px)}}
+
+/* funnel */
+.funnel{margin-top:18px;display:grid;gap:6px}
+.f-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;font-family:var(--display);font-size:14.5px}
+.f-row b{font-weight:800;font-size:17px;margin-right:6px}
+.f-track{height:22px;background:var(--paper);border-radius:6px;overflow:hidden}
+.f-bar{display:block;height:100%;background:var(--blue);border-radius:6px;transform-origin:left}
+.f-row:last-child .f-bar{background:var(--amber)}
+
+/* gantt */
+.gantt{margin-top:8px}
+.g-row{display:grid;grid-template-columns:200px 1fr;gap:0 16px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.g-axis{border-top:0;padding:0 0 4px}
+.g-label b{font-family:var(--display);font-weight:600;font-size:16px;display:block;line-height:1.2}
+.g-label span{font-family:var(--display);font-size:13.5px;color:var(--muted)}
+.g-track{position:relative;height:16px}
+.g-axis .g-track{height:20px}
+.g-axis span{position:absolute;transform:translateX(-50%);font-family:var(--display);font-size:13px;color:var(--muted)}
+.g-bar{position:absolute;top:0;height:100%;border-radius:8px;transform-origin:left}
+.g-bar.work{background:var(--blue)}
+.g-bar.study{background:var(--amber)}
+.g-key{font-family:var(--display);font-size:14px;color:var(--muted);margin-top:8px}
+.g-key i{display:inline-block;width:12px;height:12px;border-radius:4px;margin:0 6px 0 12px;vertical-align:-1px}
+.g-key i:first-child{margin-left:0}
+.g-key i.work{background:var(--blue)}
+.g-key i.study{background:var(--amber)}
+.js .anim .f-bar,.js .anim .g-bar{transform:scaleX(0)}
+.js .anim.play .f-bar,.js .anim.play .g-bar{transform:scaleX(1);transition:transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0) * .12s)}
+
+/* svg diagrams */
+.diag{display:block;width:100%;height:auto;margin-top:16px;max-width:560px}
+.diag text{font-family:var(--display);fill:var(--ink)}
+.diag .t{font-size:15px;font-weight:600}
+.diag .s{font-size:12.5px;fill:var(--muted)}
+.diag .box{fill:var(--card);stroke:var(--line);stroke-width:1.5}
+.diag .hot{fill:var(--blue-soft);stroke:#C3C9F5;stroke-width:1.5}
+.diag .ok{fill:#E3F4EC;stroke:#A9DCC3;stroke-width:1.5}
+.diag .dim{fill:#EEF0F4;stroke:#C9CEDA;stroke-width:1.5;stroke-dasharray:4 3}
+.diag .bad{fill:#FDE8E6;stroke:#F2B8B2;stroke-width:1.5}
+.diag .ln{stroke:#8B93A8;stroke-width:1.8;fill:none}
+.diag .blk{stroke:#D0453A;stroke-width:2;fill:none}
+.diag .pk{fill:var(--amber);stroke:#fff;stroke-width:1.5}
+.diag .pk2{fill:var(--blue);stroke:#fff;stroke-width:1.5}
+.sys-note{font-size:16px;color:var(--muted);margin-top:10px;max-width:60ch}
+/* skills, education */
+.skills{display:grid;grid-template-columns:150px 1fr;gap:0 20px}
+.skills dt{font-family:var(--display);font-weight:600;padding:10px 0;border-top:1px solid var(--line)}
+.skills dd{padding:10px 0;border-top:1px solid var(--line);color:var(--ink)}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.edu div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.edu b{font-family:var(--display);font-size:18px;display:block}
+.edu span{color:var(--muted);font-size:16px}
+
+/* contact */
+.contact p{max-width:56ch}
+.mail{display:inline-block;margin-top:14px;font-family:var(--display);font-weight:800;font-size:clamp(22px,3.6vw,32px);letter-spacing:-.02em;color:var(--ink);text-decoration-color:var(--blue);text-decoration-thickness:3px;text-underline-offset:6px}
+.mail:hover{color:var(--blue)}
+footer{margin-top:64px;font-family:var(--display);font-size:14px;color:var(--muted)}
+
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr;padding:0 20px;gap:0}
+  .rail{position:static;height:auto;padding:28px 0 0;gap:14px}
+  .rail nav{flex-direction:row;flex-wrap:wrap;gap:4px 14px;margin-top:16px}
+  .rail nav a{border-left:0;padding:4px 0;border-bottom:2px solid transparent}
+  .rail nav a.on{border-bottom-color:var(--blue)}
+  .rail .links{flex-direction:row;gap:18px;margin-top:14px}
+  main{padding-top:36px}
+  .stages{grid-template-columns:1fr}
+  .skills{grid-template-columns:1fr}
+  .skills dt{border-bottom:0;padding-bottom:0}
+  .skills dd{border-top:0;padding-top:2px;padding-bottom:12px}
+  .edu{grid-template-columns:1fr}
+  body{font-size:17px}
+  .proj{padding:20px}
+  .g-row{grid-template-columns:1fr;gap:4px 0}
+  .f-row{grid-template-columns:1fr;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+<div class="shell">
+
+<aside class="rail">
+  <div>
+    <div class="name">Khushboo<br>Mishra</div>
+    <div class="role">Full stack engineer<br>New York</div>
+    <nav aria-label="Sections">
+      <a href="#top" data-s="top">Overview</a>
+      <a href="#work" data-s="work">Work</a>
+      <a href="#systems" data-s="systems">Systems</a>
+      <a href="#wins" data-s="wins">Hackathons</a>
+      <a href="#experience" data-s="experience">Experience</a>
+      <a href="#skills" data-s="skills">Skills</a>
+      <a href="#contact" data-s="contact">Contact</a>
+    </nav>
+  </div>
+  <div class="links">
+    <a href="https://github.com/Khushboo-Mishra">GitHub</a>
+    <a href="https://www.linkedin.com/in/khushboo-mishra-">LinkedIn</a>
+    <a href="mailto:777khush@gmail.com">Email</a>
+  </div>
+</aside>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="h1">
+  <h1 id="h1">I build backend systems, the interfaces on top of them, and now the agents that use both.</h1>
+  <p class="sub">Nine and a half years across Microsoft, Expedia and early-stage startups. Today I build APIs and React front ends at NYU IT, prototype MCP and agent workflows, and finish my M.S. at NYU in December.</p>
+  <ul class="facts">
+    <li>Ralph Lauren and Domino's used my Copilot</li>
+    <li>Two NYU hackathon wins</li>
+    <li>4 public repos, linked below</li>
+    <li>M.S. GPA 4.0</li>
+  </ul>
+
+  <div class="panel" id="panel" aria-label="AgentOps pipeline demo">
+    <div class="panel-head">
+      <div class="panel-title">AgentOps pipeline<small>the 13 stages from my hackathon-winning repo</small></div>
+    </div>
+    <div class="tabs" role="group" aria-label="Incident scenario"></div>
+    <p class="signal" id="signal" aria-live="polite"></p>
+    <ol class="stages" id="stages"></ol>
+    <div class="panel-foot">
+      <span class="status" id="status" aria-live="polite">Ready</span>
+      <button class="run" id="run" type="button">Run again</button>
+    </div>
+  </div>
+</section>
+
+<section id="work" aria-labelledby="work-h">
+  <h2 id="work-h">Work you can open</h2>
+  <p class="lede">Every project below links to code or a live page. Where there is no public link, I say so.</p>
+
+  <article class="proj">
+    <div class="proj-top">
+      <h3>Creator Matchmaker</h3>
+      <span class="badge win">Top two, NYU SPS x Google hackathon</span>
+    </div>
+    <div class="where">YouTube creator selection for marketing campaigns</div>
+    <p>Takes a campaign brief and returns a four-creator roster with a plain-language report. It finds candidates on YouTube, screens them on measurable activity and engagement, has Gemini evaluate the evidence, and ranks the shortlist on six dimensions. Every run saves an audit file, so weights can be changed and creators swapped later without new API calls. Missing evidence stays empty instead of being guessed, and an API failure stops the run instead of filling in fake scores.</p>
+    <div class="diagram">
+      <ol class="chain" style="--n:7" aria-label="Pipeline">
+        <li style="--i:0">Campaign brief</li><li style="--i:1">YouTube discovery</li><li style="--i:2">Screening</li><li class="llm" style="--i:3">Evidence evaluation</li><li style="--i:4">Six-dimension ranking</li><li style="--i:5">Four-creator roster</li><li style="--i:6">Report and audit file</li>
+      </ol>
+      <p class="chain-note">The blue step uses Gemini. Demo mode runs the whole backend on clearly labeled synthetic data with no API keys. The repo has 154 test functions.</p>
+    </div>
+        <figure class="shot">
+      <div class="frame"><div class="frame-bar"><span class="dots"><i></i><i></i><i></i></span><a href="https://khushboo-mishra.github.io/creator-matchmaker/">khushboo-mishra.github.io/creator-matchmaker</a></div>
+      <picture><source media="(prefers-reduced-motion: reduce)" srcset="media/creator-matchmaker.png"><img src="media/creator-matchmaker.gif" alt="Screen recording of the Creator Matchmaker page. Dragging the Brand fit and Audience relevance sliders reorders the ranked creator list and changes the weighted scores, then Restore saved run resets it." width="780" height="502" loading="lazy"></picture></div>
+      <figcaption>Dragging the weight sliders re-ranks the roster from saved data, with no API calls. The creators in this exported demo are synthetic.</figcaption>
+    </figure>
+    <div class="funnel anim" aria-label="Demo run funnel: 26 discovered, 25 measurable, 20 shortlisted, 4 recommended">
+      <div class="f-row" style="--i:0"><span><b>26</b>discovered</span><span class="f-track"><i class="f-bar" style="width:100%"></i></span></div>
+      <div class="f-row" style="--i:1"><span><b>25</b>measurable</span><span class="f-track"><i class="f-bar" style="width:96.2%"></i></span></div>
+      <div class="f-row" style="--i:2"><span><b>20</b>shortlisted</span><span class="f-track"><i class="f-bar" style="width:76.9%"></i></span></div>
+      <div class="f-row" style="--i:3"><span><b>4</b>recommended</span><span class="f-track"><i class="f-bar" style="width:15.4%"></i></span></div>
+    </div>
+    <p class="chain-note">Funnel from the repo's demo mode, which runs on labeled synthetic creators.</p>
+<ul class="tags"><li>Python</li><li>YouTube Data API</li><li>Gemini</li><li>Embeddings</li><li>pytest</li></ul>
+    <div class="plinks">
+      <a href="https://khushboo-mishra.github.io/creator-matchmaker/">Project page</a>
+      <a href="https://github.com/Khushboo-Mishra/creator-matchmaker">Source on GitHub</a>
+      <span class="live" data-repo="creator-matchmaker"></span>
+    </div>
+  </article>
+
+  <article class="proj">
+    <div class="proj-top">
+      <h3>AgentOps</h3>
+      <span class="badge win">Winner, Apexon x NYU hackathon</span>
+    </div>
+    <div class="where">Incident response for production systems</div>
+    <p>A 13-stage agent pipeline that takes a production signal through reasoning, a confidence score, risk and policy gates, human approval and audit logging. It ships with four incident scenarios, and each one can land in a different decision zone. With no model installed it falls back to a deterministic simulation, so it always runs.</p>
+        <figure class="shot">
+      <div class="frame"><div class="frame-bar"><span class="dots"><i></i><i></i><i></i></span><a href="https://khushboo-mishra.github.io/AgentOps/">khushboo-mishra.github.io/AgentOps</a></div>
+      <picture><source media="(prefers-reduced-motion: reduce)" srcset="media/agentops.png"><img src="media/agentops.gif" alt="Screen recording of the AgentOps demo. The DB connection pool incident runs through confidence scoring, risk, policy and a human approval gate with a rollback proposal, then finishes with post-remediation health." width="780" height="425" loading="lazy"></picture></div>
+      <figcaption>One of the four incident scenarios running all 13 stages in simulation mode, including the human approval gate.</figcaption>
+    </figure>
+<ul class="tags"><li>Python</li><li>Streamlit</li><li>Ollama</li><li>Human in the loop</li><li>Audit log</li></ul>
+    <div class="plinks">
+      <a href="https://khushboo-mishra.github.io/AgentOps/">Live demo</a>
+      <a href="https://github.com/Khushboo-Mishra/AgentOps">Source on GitHub</a>
+      <span class="live" data-repo="AgentOps"></span>
+    </div>
+  </article>
+
+  <article class="proj">
+    <div class="proj-top">
+      <h3>Credit risk agent</h3>
+      <span class="badge win">Winner, NYU x NextAML hackathon</span>
+    </div>
+    <div class="where">Commercial loan underwriting</div>
+    <p>A digital credit committee. Seven agents read a loan application PDF, compute leverage and coverage, score expected loss, check lending policy and write the credit memo. The numbers come from deterministic credit models. The language model only handles industry risk and the written explanation, and it runs locally.</p>
+    <div class="diagram">
+      <ol class="chain" style="--n:7" aria-label="Agent chain">
+        <li style="--i:0">Document processing</li><li style="--i:1">Financial analysis</li><li style="--i:2">Risk scoring (PD x LGD)</li><li class="llm" style="--i:3">Industry risk</li><li style="--i:4">Policy compliance</li><li style="--i:5">Credit decision</li><li class="llm" style="--i:6">Credit memo</li>
+      </ol>
+      <p class="chain-note">Blue steps use the LLM. The rest are deterministic. Decisions are approve, approve with conditions, or decline.</p>
+    </div>
+    <ul class="tags"><li>Python</li><li>FastAPI</li><li>Streamlit</li><li>SQLAlchemy</li><li>Llama 3 via Ollama</li><li>LangGraph</li></ul>
+    <div class="plinks">
+      <a href="https://github.com/Khushboo-Mishra/NextAMLCreditRiskAgent">Source on GitHub</a>
+      <span class="live" data-repo="NextAMLCreditRiskAgent"></span>
+    </div>
+  </article>
+
+  <article class="proj">
+    <div class="proj-top">
+      <h3>SQL-MCP-101</h3>
+      <span class="badge">Open source teaching project</span>
+    </div>
+    <div class="where">A governed MCP server, written to be read</div>
+    <p>The idea: do not hand a model your database schema, give it business entities. The server exposes questions like course catalogue or headcount per department. There is no <code>run_query</code> tool, so a caller cannot express a statement the server did not design. It also demonstrates all three MCP primitives and who controls each.</p>
+    <div class="counts">
+      <span><b>10</b>tools</span><span><b>4</b>resources + 2 templates</span><span><b>6</b>prompts</span><span><b>7</b>semantic views over 9 hidden tables</span>
+    </div>
+
+    <svg class="diag" viewBox="0 0 520 260" role="img" aria-label="Diagram: an AI client sends business questions to the MCP server, which translates them to 7 semantic views. The 9 raw tables behind them are hidden, and there is no run_query tool.">
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8B93A8"/></marker></defs>
+      <rect class="box" x="6" y="88" width="122" height="84" rx="12"/>
+      <text class="t" x="67" y="125" text-anchor="middle">AI client</text><text class="s" x="67" y="146" text-anchor="middle">business questions</text>
+      <rect class="hot" x="196" y="30" width="136" height="200" rx="14"/>
+      <text class="t" x="264" y="60" text-anchor="middle">MCP server</text>
+      <text class="s" x="264" y="92" text-anchor="middle">10 tools</text><text class="s" x="264" y="114" text-anchor="middle">4 resources</text><text class="s" x="264" y="136" text-anchor="middle">6 prompts</text>
+      <rect class="bad" x="212" y="166" width="104" height="32" rx="8"/><text class="s" x="264" y="187" text-anchor="middle" style="fill:#A12A1F;font-weight:600">no run_query</text>
+      <rect class="box" x="392" y="14" width="122" height="232" rx="14"/>
+      <rect class="ok" x="402" y="30" width="102" height="86" rx="10"/><text class="t" x="453" y="66" text-anchor="middle">7 views</text><text class="s" x="453" y="88" text-anchor="middle">semantic</text>
+      <rect class="dim" x="402" y="136" width="102" height="86" rx="10"/><text class="t" x="453" y="172" text-anchor="middle" style="fill:#6B7285">9 tables</text><text class="s" x="453" y="194" text-anchor="middle">hidden</text>
+      <path class="ln" d="M128 130H194" marker-end="url(#ah)"/>
+      <path class="ln" d="M332 73H400" marker-end="url(#ah)"/>
+      <path class="blk" d="M332 182H366"/><path class="blk" d="M370 174l12 16M382 174l-12 16"/>
+      <circle class="pk" r="6"><animateMotion dur="6s" repeatCount="indefinite" path="M128 130L196 130L332 73L400 73L332 73L196 130L128 130" keyPoints="0;0.18;0.5;0.62;0.74;0.88;1" keyTimes="0;0.18;0.5;0.62;0.74;0.88;1" calcMode="linear"/></circle>
+    </svg>
+    <div class="diagram">
+      <table class="ctrl">
+        <tbody>
+          <tr><th scope="row">Tool</th><td>Model decides</td><td>Called mid-conversation, like a button it may press</td></tr>
+          <tr><th scope="row">Resource</th><td>Application decides</td><td>Attached up front by a human, like a file</td></tr>
+          <tr><th scope="row">Prompt</th><td>User decides</td><td>Picked from a menu, like a saved expert question</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <figure class="shot">
+      <div class="frame"><div class="frame-bar"><span class="dots"><i></i><i></i><i></i></span><a href="https://khushboo-mishra.github.io/SQL-MCP-101/">khushboo-mishra.github.io/SQL-MCP-101</a></div>
+      <picture><source media="(prefers-reduced-motion: reduce)" srcset="media/sql-mcp-101.png"><img src="media/sql-mcp-101.gif" alt="Screen recording of the SQL-MCP-101 tutorial stepping through why not to expose a database schema, the three MCP building blocks, a vague versus real tool description, and the tool-or-resource decision guide." width="780" height="496" loading="lazy"></picture></div>
+      <figcaption>The tutorial walks through the three MCP building blocks, then makes the reader decide which one a feature should be.</figcaption>
+    </figure>
+<ul class="tags"><li>Python</li><li>MCP SDK</li><li>MySQL</li><li>Semantic layer</li><li>Audit log</li></ul>
+    <div class="plinks">
+      <a href="https://khushboo-mishra.github.io/SQL-MCP-101/">Interactive tutorial</a>
+      <a href="https://github.com/Khushboo-Mishra/SQL-MCP-101">Source on GitHub</a>
+      <span class="live" data-repo="SQL-MCP-101"></span>
+    </div>
+  </article>
+</section>
+
+<section id="systems" aria-labelledby="sys-h">
+  <h2 id="sys-h">Systems I shipped</h2>
+  <p class="lede">Two Microsoft systems, drawn from the public documentation and my own work on them.</p>
+
+  <article class="proj">
+    <div class="proj-top"><h3>Product search for two channels</h3><span class="badge">Dynamics 365 Commerce</span></div>
+    <div class="where">Still in production</div>
+    <p>I was a core contributor on the indexing and query services behind faceted browse, autosuggest and ranked results. Product data is published once, and both the online store and the in-store checkout query the same index.</p>
+    <svg class="diag" viewBox="0 0 520 220" role="img" aria-label="Diagram: Commerce headquarters publishes product data once to one search index. The online store and the store checkout both query that same index.">
+      <defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8B93A8"/></marker></defs>
+      <rect class="box" x="6" y="74" width="118" height="72" rx="12"/><text class="t" x="65" y="106" text-anchor="middle">Commerce</text><text class="t" x="65" y="126" text-anchor="middle">headquarters</text>
+      <rect class="hot" x="186" y="56" width="140" height="108" rx="14"/><text class="t" x="256" y="96" text-anchor="middle">One search</text><text class="t" x="256" y="116" text-anchor="middle">index</text><text class="s" x="256" y="140" text-anchor="middle">Azure AI Search</text>
+      <rect class="ok" x="388" y="14" width="126" height="68" rx="12"/><text class="t" x="451" y="44" text-anchor="middle">Online store</text><text class="s" x="451" y="64" text-anchor="middle">browse, suggest</text>
+      <rect class="ok" x="388" y="138" width="126" height="68" rx="12"/><text class="t" x="451" y="166" text-anchor="middle">Store checkout</text><text class="s" x="451" y="186" text-anchor="middle">product lookup</text>
+      <path class="ln" d="M124 110H184" marker-end="url(#ah2)"/>
+      <path class="ln" d="M326 92L386 56" marker-end="url(#ah2)"/>
+      <path class="ln" d="M326 128L386 164" marker-end="url(#ah2)"/>
+      <circle class="pk" r="6"><animateMotion dur="3.4s" repeatCount="indefinite" path="M124 110H186"/></circle>
+      <circle class="pk2" r="6"><animateMotion dur="3.4s" begin="1.2s" repeatCount="indefinite" path="M326 92L388 54"/></circle>
+      <circle class="pk2" r="6"><animateMotion dur="3.4s" begin="1.9s" repeatCount="indefinite" path="M326 128L388 166"/></circle>
+    </svg>
+
+    <div class="plinks"><a href="https://learn.microsoft.com/en-us/dynamics365/commerce/cloud-powered-search-overview">Cloud-powered search overview</a><a href="https://learn.microsoft.com/en-us/dynamics365/commerce/pos-search-improvements">Product search in the point of sale</a></div>
+  </article>
+
+  <article class="proj">
+    <div class="proj-top"><h3>Store Operations Copilot</h3><span class="badge">Azure OpenAI</span></div>
+    <div class="where">Led for Microsoft Cloud for Retail</div>
+    <p>Store staff ask one question and the copilot decides whether to check stock, look up a policy or close a daily task. It replaced moving through four separate systems.</p>
+    <svg class="diag" viewBox="0 0 520 250" role="img" aria-label="Diagram: a store associate asks one question. The copilot, built on Azure OpenAI and Semantic Kernel, routes it to a stock check, a policy lookup or closing a daily task, and returns one answer.">
+      <defs><marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8B93A8"/></marker></defs>
+      <rect class="box" x="6" y="88" width="118" height="74" rx="12"/><text class="t" x="65" y="120" text-anchor="middle">Store associate</text><text class="s" x="65" y="141" text-anchor="middle">asks one question</text>
+      <rect class="hot" x="186" y="58" width="140" height="134" rx="14"/><text class="t" x="256" y="96" text-anchor="middle">Copilot</text><text class="s" x="256" y="124" text-anchor="middle">Azure OpenAI</text><text class="s" x="256" y="146" text-anchor="middle">Semantic Kernel</text>
+      <rect class="ok" x="388" y="10" width="126" height="54" rx="12"/><text class="t" x="451" y="43" text-anchor="middle">Stock check</text>
+      <rect class="ok" x="388" y="98" width="126" height="54" rx="12"/><text class="t" x="451" y="131" text-anchor="middle">Policy lookup</text>
+      <rect class="ok" x="388" y="186" width="126" height="54" rx="12"/><text class="t" x="451" y="219" text-anchor="middle">Close daily task</text>
+      <path class="ln" d="M124 125H184" marker-end="url(#ah3)"/>
+      <path class="ln" d="M326 100L386 38" marker-end="url(#ah3)"/>
+      <path class="ln" d="M326 125H386" marker-end="url(#ah3)"/>
+      <path class="ln" d="M326 150L386 214" marker-end="url(#ah3)"/>
+      <circle class="pk" r="6"><animateMotion dur="4.8s" repeatCount="indefinite" path="M124 125H186L256 125"/></circle>
+      <circle class="pk2" r="6"><animateMotion dur="4.8s" begin="1.4s" repeatCount="indefinite" path="M326 100L388 38"/></circle>
+      <circle class="pk2" r="6"><animateMotion dur="4.8s" begin="2.2s" repeatCount="indefinite" path="M326 125H388"/></circle>
+      <circle class="pk2" r="6"><animateMotion dur="4.8s" begin="3s" repeatCount="indefinite" path="M326 150L388 214"/></circle>
+    </svg>
+
+    <div class="plinks"><a href="https://news.microsoft.com/2024/01/11/microsoft-unveils-new-generative-ai-and-data-solutions-across-the-shopper-journey-offering-copilot-experiences-through-microsoft-cloud-for-retail/">Microsoft's announcement</a></div>
+  </article>
+</section>
+
+<section id="wins" aria-labelledby="wins-h">
+  <h2 id="wins-h">Hackathons</h2>
+  <p class="lede">Three at NYU. Two wins and a top-two finish.</p>
+  <ol class="tl">
+    <li>
+      <div class="when">Fall 2026</div>
+      <h3>NYU SPS x Google Marketing Accelerator <span class="org">Top two in Track 2</span></h3>
+      <ul><li>One of the top two teams in Track 2, Product and Engineering, with <a href="https://khushboo-mishra.github.io/creator-matchmaker/">Creator Matchmaker</a>.</li>
+      <li>The brief: use Google AI to shorten planning, launching and analyzing YouTube creator marketing campaigns.</li></ul>
+    </li>
+    <li>
+      <div class="when">NYU x NextAML</div>
+      <h3>Winner <span class="org">Credit risk agent</span></h3>
+      <ul><li>Seven-agent underwriting engine, described above.</li></ul>
+    </li>
+    <li>
+      <div class="when">Apexon x NYU</div>
+      <h3>Winner <span class="org">AgentOps</span></h3>
+      <ul><li>Thirteen-stage incident response pipeline, described above.</li></ul>
+    </li>
+  </ol>
+</section>
+
+<section id="experience" aria-labelledby="exp-h">
+  <h2 id="exp-h">Experience</h2>
+  <p class="lede">From C++ tooling at Samsung to retail AI at Microsoft.</p>
+  <div class="gantt anim" role="img" aria-label="Career timeline: Samsung 2016 to 2018, Bounce 2018 to 2019, Expedia 2019 to 2021, Microsoft 2021 to 2026, NYU M.S. 2026, NYU IT 2026 to present">
+    <div class="g-row g-axis"><div class="g-label"></div><div class="g-track"><span style="left:3.23%">2017</span><span style="left:22.58%">2019</span><span style="left:41.94%">2021</span><span style="left:61.29%">2023</span><span style="left:80.65%">2025</span></div></div>
+    <div class="g-row" style="--i:0"><div class="g-label"><b>Samsung</b><span>Engineer</span></div><div class="g-track"><i class="g-bar work" style="left:0.00%;width:19.35%"></i></div></div>
+    <div class="g-row" style="--i:1"><div class="g-label"><b>Bounce</b><span>Software Engineer</span></div><div class="g-track"><i class="g-bar work" style="left:20.16%;width:6.45%"></i></div></div>
+    <div class="g-row" style="--i:2"><div class="g-label"><b>Expedia</b><span>SDE I</span></div><div class="g-track"><i class="g-bar work" style="left:25.81%;width:18.55%"></i></div></div>
+    <div class="g-row" style="--i:3"><div class="g-label"><b>Microsoft</b><span>Software Engineer II</span></div><div class="g-track"><i class="g-bar work" style="left:43.55%;width:47.58%"></i></div></div>
+    <div class="g-row" style="--i:4"><div class="g-label"><b>NYU, M.S.</b><span>Management and Analytics</span></div><div class="g-track"><i class="g-bar study" style="left:90.32%;width:9.68%"></i></div></div>
+    <div class="g-row" style="--i:5"><div class="g-label"><b>NYU IT</b><span>API Developer</span></div><div class="g-track"><i class="g-bar work" style="left:93.55%;width:5.65%"></i></div></div>
+    <p class="g-key"><i class="work"></i>Work <i class="study"></i>Study. The M.S. runs alongside NYU IT.</p>
+  </div>
+  <div style="height:36px"></div>
+  <ol class="tl">
+    <li>
+      <div class="when">May 2026 to present, New York</div>
+      <h3>API Developer <span class="org">NYU IT, Enterprise Integration Services</span></h3>
+      <ul>
+        <li>Build and maintain the REST APIs that connect university systems, and the React and TypeScript front ends that use them.</li>
+        <li>Maintain a Flask backend behind an access approval workflow and moved its authentication to OIDC claims during the university's Entra ID migration.</li>
+        <li>Prototyped an MCP server and agent for an internal approval workflow: five tools wrapping existing backend helpers, plain-English questions turned into tool calls, a local model with a rule-based fallback, and a daily job that flags stuck approvals.</li>
+        <li>Co-presented a session on MCP and agentic AI to the team.</li>
+      </ul>
+      <ul class="tags"><li>Python</li><li>TypeScript</li><li>React</li><li>SQL</li><li>GitHub CI/CD</li></ul>
+    </li>
+    <li>
+      <div class="when">Mar 2021 to Jan 2026, Hyderabad</div>
+      <h3>Software Engineer II <span class="org">Microsoft</span></h3>
+      <ul>
+        <li><b>Dynamics 365 Commerce search.</b> Core contributor on the indexing and query services behind faceted browse, autosuggest and ranked results, from one index shared by online stores and in-store checkout. Still in production. Also worked on regional failover design and testing between East Asia and Southeast Asia.<span class="src">Public record: <a href="https://learn.microsoft.com/en-us/dynamics365/commerce/cloud-powered-search-overview">cloud-powered search overview</a> and <a href="https://learn.microsoft.com/en-us/dynamics365/commerce/pos-search-improvements">product search in the point of sale</a>.</span></li>
+        <li><b>Store Operations Copilot.</b> Led a retrieval-augmented assistant on Azure OpenAI that lets store staff check stock, look up policy and close daily tasks with one question instead of four systems. Used by Ralph Lauren and Domino's.<span class="src">Public record: <a href="https://news.microsoft.com/2024/01/11/microsoft-unveils-new-generative-ai-and-data-solutions-across-the-shopper-journey-offering-copilot-experiences-through-microsoft-cloud-for-retail/">Microsoft's announcement of the store operations copilot template</a>.</span></li>
+        <li><b>Ask Ralph.</b> Worked on Ralph Lauren's AI styling assistant, built with Microsoft on Azure OpenAI, which reads what a shopper means and returns complete outfits from live inventory.<span class="src">Public record: <a href="https://microsoft.com/en/customers/story/25195-ralph-lauren-azure-openai">Microsoft customer story</a> and <a href="https://news.microsoft.com/source/2025/09/09/ralph-lauren-introduces-ask-ralph-a-new-conversational-ai-shopping-experience/">launch announcement</a>.</span></li>
+        <li><b>Azure FarmBeats.</b> Built the weather and billing services from scratch as independent microservices, with audit logging, dashboards and synthetic monitoring so failures showed up before customers noticed. Customers included the USDA and Bayer.<span class="src">Public record: <a href="https://azure.microsoft.com/en-us/blog/democratizing-agriculture-intelligence-introducing-azure-farmbeats/">Azure FarmBeats launch post</a> (with the USDA partnership) and <a href="https://azure.microsoft.com/en-us/blog/announcing-microsoft-azure-data-manager-for-agriculture-accelerating-innovation-across-the-agriculture-value-chain/">the successor platform, with Bayer</a>.</span></li>
+        <li>Mentored six junior engineers and interns, led design reviews and carried production on-call.</li>
+      </ul>
+      <ul class="tags"><li>Azure OpenAI</li><li>Azure AI Search</li><li>Semantic Kernel</li><li>C#</li><li>Java</li><li>Microservices</li></ul>
+    </li>
+    <li>
+      <div class="when">May 2019 to Mar 2021, Gurugram</div>
+      <h3>Software Development Engineer I <span class="org">Expedia Group</span></h3>
+      <ul>
+        <li>Built coupon targeting by location and customer segment across flights, packages and activities, so marketing could discount a chosen audience instead of the whole site.</li>
+        <li>Wrote load and failure tests modeled on production traffic to find capacity limits before peak travel season, and built a serverless job that tracked batch file processing end to end.</li>
+      </ul>
+      <ul class="tags"><li>Java</li><li>Kotlin</li><li>React</li><li>GraphQL</li></ul>
+    </li>
+    <li>
+      <div class="when">Oct 2018 to May 2019, Bengaluru</div>
+      <h3>Software Engineer <span class="org">Bounce, fourth engineer hired</span></h3>
+      <ul>
+        <li>Rebuilt the payment system from scratch after finding security flaws in the old one. Checkout went from failing daily to stable across four providers: Paytm, RazorPay, PhonePe and LazyPay.</li>
+        <li>Automated identity verification with image recognition at 80% accuracy. Monthly bookings grew from 3,000 to 17,000.</li>
+      </ul>
+    </li>
+    <li>
+      <div class="when">Sep 2016 to Aug 2018, Noida</div>
+      <h3>Engineer <span class="org">Samsung</span></h3>
+      <ul>
+        <li>Built C++ tooling that resolved mobile carrier network conflicts across European markets. Delivered five device releases on schedule, including the Galaxy Tab S3.</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<section id="skills" aria-labelledby="skills-h">
+  <h2 id="skills-h">Skills and education</h2>
+  <p class="lede">What I use most is first in each row.</p>
+  <dl class="skills">
+    <dt>Languages</dt><dd>Python, TypeScript, Java, C#, JavaScript, Kotlin, C++</dd>
+    <dt>Frontend</dt><dd>React, TypeScript</dd>
+    <dt>Backend</dt><dd>REST APIs, FastAPI, Flask, Node.js, Spring Boot, .NET, GraphQL, microservices, distributed systems, event-driven architecture</dd>
+    <dt>Data</dt><dd>PostgreSQL, MS SQL, CosmosDB, Azure AI Search, Azure Event Hub</dd>
+    <dt>Cloud and ops</dt><dd>Azure (API Management, Functions, DevOps), AWS (Lambda), GitHub Actions, Jenkins, Splunk, Log Analytics</dd>
+    <dt>AI</dt><dd>MCP, agent workflows, RAG, hybrid vector search, Azure OpenAI, LangChain, LangGraph, Semantic Kernel, Ollama</dd>
+  </dl>
+  <div class="edu" style="margin-top:28px">
+    <div><b>New York University</b><span>M.S. Management and Analytics, GPA 4.0 / 4.0. Expected December 2026.</span></div>
+    <div><b>Birla Institute of Technology, Mesra</b><span>B.E. Information Technology, 2016. Microsoft Certified: Azure AI Fundamentals (AI-900).</span></div>
+  </div>
+</section>
+
+<section id="contact" class="contact" aria-labelledby="contact-h">
+  <h2 id="contact-h">Contact</h2>
+  <p>Email is the fastest way to reach me. I am based in New York.</p>
+  <a class="mail" href="mailto:777khush@gmail.com">777khush@gmail.com</a>
+  <p style="margin-top:14px"><a href="https://www.linkedin.com/in/khushboo-mishra-">LinkedIn</a> and <a href="https://github.com/Khushboo-Mishra">GitHub</a></p>
+  <footer>Plain HTML, no framework. Repo dates load live from GitHub.</footer>
+</section>
+
+</main>
+</div>
+
+<script>
+(function(){
+  var STAGES=[
+    ["Signal ingestion",""],["Context aggregation",""],["Preprocessing",""],
+    ["Reasoning","MPPR and CoVe"],["Confidence","triangulated certainty score"],["Risk","impact and liability matrix"],
+    ["Policy",""],["Decision gateway",""],["Action execution",""],
+    ["Human in the loop",""],["Audit",""],["Feedback",""],["Monitoring",""]
+  ];
+  var SCEN=[
+    {tab:"Connection pool",svc:"payments-service",sig:"A recent deploy introduces a connection leak and the database connection pool is exhausted."},
+    {tab:"Crash loop",svc:"recommendations-service",sig:"The service sits in CrashLoopBackOff after a memory-leak release."},
+    {tab:"Latency spike",svc:"API gateway",sig:"P99 latency spikes as the gateway worker pool saturates under a degraded upstream auth-service."},
+    {tab:"Expiring cert",svc:"wildcard TLS certificate",sig:"The wildcard certificate is about to expire and renewal keeps failing after a firewall change."}
+  ];
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var tabs=document.querySelector(".tabs"),list=document.getElementById("stages"),
+      signal=document.getElementById("signal"),status=document.getElementById("status"),
+      run=document.getElementById("run"),cur=0,timer=null,lis=[];
+
+  STAGES.forEach(function(s){
+    var li=document.createElement("li");li.className="stage";
+    li.innerHTML="<i></i><span>"+s[0]+"</span>"+(s[1]?"<span class=d>"+s[1]+"</span>":"");
+    list.appendChild(li);lis.push(li);
+  });
+  SCEN.forEach(function(sc,i){
+    var b=document.createElement("button");b.type="button";b.className="tab";
+    b.textContent=sc.tab;b.setAttribute("aria-pressed",i===0);
+    b.addEventListener("click",function(){select(i)});
+    tabs.appendChild(b);
+  });
+  function select(i){
+    cur=i;
+    [].forEach.call(tabs.children,function(b,j){b.setAttribute("aria-pressed",j===i)});
+    start();
+  }
+  function paint(n,finished){
+    lis.forEach(function(li,k){
+      li.className="stage"+(k<n?" done":(k===n&&!finished?" now":""));
+    });
+  }
+  function start(){
+    clearInterval(timer);
+    var sc=SCEN[cur];
+    signal.innerHTML="<b>"+sc.svc+".</b> "+sc.sig;
+    if(reduce){paint(13,true);status.textContent="Complete: 13 of 13 stages";return}
+    var n=0;paint(0,false);status.textContent="Stage 1 of 13: "+STAGES[0][0];
+    timer=setInterval(function(){
+      n++;
+      if(n>=13){clearInterval(timer);paint(13,true);status.textContent="Complete: 13 of 13 stages";return}
+      paint(n,false);status.textContent="Stage "+(n+1)+" of 13: "+STAGES[n][0];
+    },380);
+  }
+  run.addEventListener("click",start);
+  setTimeout(start,500);
+
+
+  /* animate bars when scrolled into view */
+  document.documentElement.classList.add("js");
+  var anims=[].slice.call(document.querySelectorAll(".anim"));
+  if("IntersectionObserver" in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("play");io.unobserve(e.target)}})},{threshold:.25});
+    anims.forEach(function(a){io.observe(a)});
+  }else{anims.forEach(function(a){a.classList.add("play")})}
+  if(reduce){[].forEach.call(document.querySelectorAll("svg.diag"),function(sv){try{sv.pauseAnimations()}catch(e){}})}
+
+  /* scrollspy */
+  var links=[].slice.call(document.querySelectorAll(".rail nav a"));
+  var ids=links.map(function(a){return a.dataset.s});
+  function spy(){
+    var y=window.scrollY+160,on=ids[0];
+    ids.forEach(function(id){
+      var el=id==="top"?document.body:document.getElementById(id);
+      if(id!=="top"&&el&&el.getBoundingClientRect().top+window.scrollY<=y)on=id;
+    });
+    links.forEach(function(a){a.classList.toggle("on",a.dataset.s===on)});
+  }
+  window.addEventListener("scroll",spy,{passive:true});spy();
+
+  /* live repo dates (fails silently) */
+  [].forEach.call(document.querySelectorAll("[data-repo]"),function(el){
+    fetch("https://api.github.com/repos/Khushboo-Mishra/"+el.dataset.repo)
+      .then(function(r){return r.ok?r.json():null})
+      .then(function(d){
+        if(!d||!d.pushed_at)return;
+        var t=new Date(d.pushed_at).toLocaleDateString("en-US",{month:"short",year:"numeric"});
+        el.textContent="Last pushed "+t+(d.stargazers_count?", "+d.stargazers_count+" stars":"");
+      }).catch(function(){});
+  });
+})();
+</script>
+</body>
+</html>
