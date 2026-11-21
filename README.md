@@ -1,6 +1,6 @@
 # Khushboo Mishra
 
-Full stack engineer in New York with 9.5 years of experience building backend systems and the interfaces on top of them, and more recently agentic AI and MCP workflows.
+Full stack engineer in New York with 9.5 years of experience building backend, UI and infrastructure, and more recently agentic AI and MCP workflows.
 
 **Portfolio: https://khushboo-mishra.github.io/**
 
