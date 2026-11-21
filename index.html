@@ -396,6 +396,27 @@ footer{margin-top:64px;font-family:var(--display);font-size:14px;color:var(--mut
       <span class="live" data-repo="SQL-MCP-101"></span>
     </div>
   </article>
+
+  <article class="proj">
+    <div class="proj-top">
+      <h3>Deal Replay</h3>
+      <span class="badge">NYU capstone</span>
+    </div>
+    <div class="where">AI-powered legal training for M&A transactions</div>
+    <p>An admin uploads a purchase agreement and the system extracts parties, deal terms, negotiation issues and party positions using an LLM. From that structured data it generates five types of exercises: issue spotting, multiple choice, true or false, position and rationale, and negotiation replay. Each exercise is graded against an AI-generated rubric, and learners can chat mid-attempt to work through their reasoning. Admins review and approve exercises before they go live, and can attach prerequisite lessons so learners build context first.</p>
+    <div class="diagram">
+      <ol class="chain" style="--n:6" aria-label="Pipeline">
+        <li style="--i:0">Document upload</li><li class="llm" style="--i:1">Structured extraction</li><li class="llm" style="--i:2">Exercise generation</li><li style="--i:3">Admin review</li><li style="--i:4">Learner attempt</li><li class="llm" style="--i:5">Rubric grading</li>
+      </ol>
+      <p class="chain-note">Blue steps use the LLM. The extraction pulls parties, deal terms, issues and positions from raw documents. Exercise generation and grading each make separate LLM calls.</p>
+    </div>
+    <ul class="tags"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>SQLAlchemy</li><li>OpenAI</li><li>PostgreSQL</li><li>Railway</li></ul>
+    <div class="plinks">
+      <a href="https://frontend-production-da24.up.railway.app">Live app</a>
+      <a href="https://github.com/Khushboo-Mishra/deal-replay">Source on GitHub</a>
+      <span class="live" data-repo="deal-replay"></span>
+    </div>
+  </article>
 </section>
 
 <section id="systems" aria-labelledby="sys-h">
